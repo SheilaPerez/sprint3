@@ -101,7 +101,14 @@ function generateCart() {
 
 // Exercise 5
 function applyPromotionsCart() {
-
+    for (var i = 0; i < cart.length; i++) {
+        if (cart[i].id == 1 && cart[i].quantity >= 3) {
+            cart[i].price = 10;
+        }
+        if (cart[i].id == 3 && cart[i].quantity >= 10) {
+            cart[i].price = cart[i].price / 3;
+        }
+    }
 }
 
 

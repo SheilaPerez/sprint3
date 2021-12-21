@@ -65,7 +65,7 @@ var total = 0;
 
 // Exercise 1
 function buy(id) {
-    for (i = 0; i <= products.length; i++) {
+    for (var i = 0; i <= products.length; i++) {
         if (products[i].id == id) {
             cartList.push(products[i]);
         }     
@@ -74,7 +74,7 @@ function buy(id) {
 
 // Exercise 2
 function cleanCart() {
-
+    cartList = [];
 }
 
 // Exercise 3

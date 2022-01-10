@@ -119,6 +119,23 @@ function addToCart(id) {
     // Refactor previous code in order to simplify it 
     // 1. Loop for to the array products to get the item to add to cart
     // 2. Add found product to the cart array or update its quantity in case it has been added previously.
+    products.forEach(product => {
+        if (product.id == id) {
+            if (cart.length == 0) {
+                product.quantity = 1;
+                cart.push(product);
+            } else {
+                var found = cart.findIndex(cartProduct => cartProduct.id == id);
+                if (found == -1) {
+                    product.quantity = 1;
+                    cart.push(product);
+                } else {
+                    cart[found].quantity++;
+                }
+            }
+        }
+    })
+    console.log(cart)
 }
 
 // Exercise 8

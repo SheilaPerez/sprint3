@@ -142,6 +142,15 @@ function addToCart(id) {
 function removeFromCart(id) {
     // 1. Loop for to the array products to get the item to add to cart
     // 2. Add found product to the cartList array
+    cart.forEach((product, index) => {
+        if (product.id == id && product.quantity > 1) {
+            product.quantity--;
+        } else {
+            cart.splice(index)
+        }
+    })
+
+    console.log('remove', cart)
 }
 
 // Exercise 9

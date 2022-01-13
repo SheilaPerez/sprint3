@@ -80,8 +80,9 @@ function cleanCart() {
 // Exercise 3
 function calculateTotal() {
     var result = 0;
-    for (var i = 0; i < products.length; i++){
-        result = products[i].price + result;
+    applyPromotionsCart();
+    for (var i = 0; i < cart.length; i++){
+        result = cart[i].price*cart[i].quantity + result;
     }
     return result;
 }
@@ -104,8 +105,8 @@ function applyPromotionsCart() {
     for (var i = 0; i < cart.length; i++) {
         if (cart[i].id == 1 && cart[i].quantity >= 3) {
             cart[i].price = 10;
-        }
-        if (cart[i].id == 3 && cart[i].quantity >= 10) {
+            console.log("precio", cart[i].price)
+        } if (cart[i].id == 3 && cart[i].quantity >= 10) {
             cart[i].price = cart[i].price / 3;
         }
     }
@@ -116,9 +117,6 @@ function applyPromotionsCart() {
 
 // Exercise 7
 function addToCart(id) {
-    // Refactor previous code in order to simplify it 
-    // 1. Loop for to the array products to get the item to add to cart
-    // 2. Add found product to the cart array or update its quantity in case it has been added previously.
     products.forEach(product => {
         if (product.id == id) {
             if (cart.length == 0) {
@@ -135,25 +133,41 @@ function addToCart(id) {
             }
         }
     })
-    console.log(cart)
+    console.log(cart);
+    printCart()
 }
 
 // Exercise 8
 function removeFromCart(id) {
-    // 1. Loop for to the array products to get the item to add to cart
-    // 2. Add found product to the cartList array
-    cart.forEach((product, index) => {
-        if (product.id == id && product.quantity > 1) {
-            product.quantity--;
-        } else {
-            cart.splice(index)
+    for (var i = 0; i < cart.length; i++) {
+        if (cart[i].id == id) {
+            if (cart[i].quantity > 1) {
+                cart[i].quantity--;
+                console.log("cantidad", cart)
+            } else {
+                cart = cart.filter(function (product) {
+                    return product.id !== cart[i].id
+                })
+                console.log("solo1", cart)   
+            }       
         }
-    })
-
-    console.log('remove', cart)
+        break;
+    }   
+    printCart();
 }
 
 // Exercise 9
 function printCart() {
-    // Fill the shopping cart modal manipulating the shopping cart dom
+    var p = document.createElement("p");
+    p.innerHTML = `<p>Total precio: ${calculateTotal()}<p> `
+    
+    var list = document.querySelector('.list');
+    list.innerHTML = "";
+    cart.forEach((product) => {
+        var li = document.createElement("li");
+        li.innerHTML = `<li><p>Artículo: </p>${product.name} <p>Precio: </p>${product.price} <p>Cantidad: </p>${product.quantity} <p>Eliminar: </p><button type="button" onClick="removeFromCart(${product.id})">X</button></li>`
+        list.appendChild(li); 
+    })
+
+    list.appendChild(p);
 }

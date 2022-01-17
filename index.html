@@ -13,23 +13,48 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
     <title>ShopNow</title>
 </head>
 
 <body>
     <!-- header -->
-    <header class="m-5">
-        <h1 class="text-center m-5"><i class="fas fa-shopping-cart mr-2"></i> ShopNow</h1>
-        <h3 class="text-center m-3">Welcome to your Online Shopping Store.</h3>
-    </header>
+    <div class="container">
+        <div class="row">
+            <header class="pt-5 pb-5">
+                <h1 class="title">ShopNow</h1>
+                <p class="subtitle mb-5 fontQuicksand">Welcome to your Online Shopping Store.</p>
+            </header>
+        </div>
+    </div>
+
 
     <!-- Buttons -->
-    <h3 class="text-center">Select your category:</h3>
     <div class="text-center">
-        <button type="button" onclick="window.location.href = 'shop.html#grocery';" class="btn m-4 mt-5 btn btn-primary">Grocery</button>
-        <button type="button" onclick="window.location.href = 'shop.html#beauty';" class="btn m-4 mt-5 btn btn-primary">Beauty</button>
-        <button type="button" onclick="window.location.href = 'shop.html#clothes';" class="btn m-4 mt-5 btn btn-primary">Clothes</button>
+        <div class="displayInline">
+            <div class="card shadow p-3 mb-5 bg-body rounded">
+                <button type="button" onclick="window.location.href = 'shop.html#grocery';" class="groceryBtn"></button>
+                <div class="card-body">
+                    <p class="card-text fontQuicksand">Grocery</p>
+                </div>
+            </div>
+        </div>
+        <div class="displayInline">
+            <div class="card shadow p-3 mb-5 bg-body rounded">
+                <button type="button" onclick="window.location.href = 'shop.html#beauty';" class="beautyBtn"></button>
+                <div class="card-body">
+                    <p class="card-text fontQuicksand">Beauty</p>
+                </div>
+            </div>
+        </div>
+        <div class="displayInline">
+            <div class="card shadow p-3 mb-5 bg-body rounded">
+                <button type="button" onclick="window.location.href = 'shop.html#clothes';" class="clothesBtn"></button>
+                <div class="card-body">
+                    <p class="card-text fontQuicksand">Clothes</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- script tags -->

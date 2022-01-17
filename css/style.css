@@ -1,4 +1,74 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
+
 body{
     font-family: Poppins;
 }
+
+.fontQuicksand {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.displayInline {
+    display: inline-block;
+}
+
+.title {
+    font-family: 'The Nautigal', cursive;
+    color: #F4DFBA;
+    font-size: 110px;
+    display:flex;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+}
+.subtitle {
+    font-size: 15px;
+    margin-left: 190px;
+    margin-left: 150px;
+    z-index: 2;
+    margin-top: -30px;
+}
+
+.groceryBtn {
+    background-image: url(https://img.freepik.com/foto-gratis/deliciosa-comida-vietnamita-que-incluye-pho-ga-fideos-rollitos-primavera-mesa-blanca_181624-34062.jpg?size=626&ext=jpg&ga=GA1.2.864066330.1636416000);
+    background-size: cover;
+    height: 200px;
+}
+
+.beautyBtn {
+    background-image: url(https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFrZXVwfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
+    background-size: cover;
+    height: 200px;
+}
+
+.clothesBtn {
+    background-image: url(https://escuelaelbs.com/wp-content/uploads/ropa-casual.jpg);
+    background-size: cover;
+    height: 200px;
+}
+
+.card {
+    width: 400px;;
+}
+
+@media (min-width: 768px) { 
+    .card {
+        width: 250px;;
+    }
+ }
+
+ @media (min-width: 992px) { 
+    .card {
+        width: 280px;;
+    }
+  }
+
+
+
+
+
+
+
+
+
+

@@ -10,3 +10,7 @@ body {
 .errorColorRed {
     border-color: red;
 }
+
+.validGreen {
+    border-color: green;
+}

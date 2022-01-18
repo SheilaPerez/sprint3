@@ -10,6 +10,7 @@
   <!-- font awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,700&family=Quicksand:wght@300&family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/shop.css">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -20,126 +21,107 @@
 
   <!-- navbar -->
   <nav class="navbar navbar-expand-md bg-secondary sticky-top">
-    <a class="navbar-brand text-white" href="index.html"><span><i class="fas fa-shopping-cart mr-2"></i></span>
-      <span>Volver</span> </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <a class="navbar-brand text-white" href="index.html">
+      <span class="backBtn">Menú</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="modal"
+    data-target="#cartModal" onclick="cart()"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-cart-arrow-down"></i>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link text-white btn" id="cart" type="button" data-toggle="modal"
-            data-target="#cartModal" onclick="cart()" href="#beauty"><i class="fas fa-cart-arrow-down"></i>
+          <a class="nav-link btn" id="cart" type="button" data-toggle="modal"
+            data-target="#cartModal" onclick="cart()" href="#beauty">
             My Cart</a>
         </li>
       </ul>
     </div>
   </nav>
-
-  <h1 class="text-center mt-3 m-5">Welcome to the ShopNow</h1>
-
   <!-- Grocery part -->
   <section>
-    <h2 class="text-center"><i class="fas fa-shopping-basket mr-2"></i>Grocery</h2>
+    <div class="healthyImg">
+        <h2 class="text-center bannerTitle pt-5">Helthy food</h2>
+    </div>
     <div id="grocery" class="row ml-3 m-5">
-
-      <div class="card col-sm-3 m-1 ml-5 p-4" style="width: 18rem;">
-        <img src="./images/product.svg" class="grocery-img">
-        <div class="card-body text-center">
-          <h5 class="card-title">cooking oil</h5>
-          <h1 class="card-text">$10.5</h1>
-          <button type="button" onclick="addToCart(1)" class="btn btn-primary">Add to cart</button>
-        </div>
-      </div>
-
-      <div class="card col-sm-3 m-1 ml-5 p-4" style="width: 18rem;">
-        <img src="./images/product.svg" class="grocery-img">
-        <div class="card-body text-center">
-          <h5 class="card-title">Pasta</h5>
-          <h1 class="card-text">$6.25</h1>
-          <button type="button" onclick="addToCart(2)" class="btn btn-primary">Add to cart</button>
-        </div>
-      </div>
-
-      <div class="card col-sm-3 m-1 ml-5 p-4" style="width: 18rem;">
-        <img src="./images/product.svg" class="grocery-img">
-        <div class="card-body text-center">
-          <h5 class="card-title">Instant cupcake mixture</h5>
-          <h1 class="card-text">$5</h1>
-          <button type="button" onclick="addToCart(3)" class="btn btn-primary">Add to cart</button>
-        </div>
-      </div>
+        <ul>
+          <li>
+            <img src="./images/agucate.jpeg" class="grocery-img">
+            <h6 class="product ml-3">Avocado: </h6>
+            <h6 class="price mr-3">10.5$</h6>
+            <button type="button" onclick="addToCart(1)" class="btn">Add to cart</button>
+          </li>
+          <li>
+              <img src="./images/tomate-cana-andaluz.jpeg" class="grocery-img">
+              <h6 class="product ml-3">Tomato: </h6>
+              <h6 class="price mr-3">6.25$</h6>
+              <button type="button" onclick="addToCart(2)" class="btn">Add to cart</button>
+          </li>
+          <li>
+              <img src="./images/banana_64728013.jpeg" class="grocery-img">
+              <h6 class="product ml-3">Banana: </h6>
+              <h6 class="price mr-3">5$</h6>
+              <button type="button" onclick="addToCart(3)" class="btn">Add to cart</button>
+          </li>
+        </ul>
     </div>
   </section>
 
   <!-- beauty part -->
   <section>
-    <h2 class="text-center"><i class="fas fa-heart mr-2"></i>Beauty</h2>
+    <div class="beautyImg">
+        <h2 class="text-center bannerTitle pt-5"></i>Beauty</h2>
+    </div>
     <div id="beauty" class="row ml-3 m-5">
+      <ul>
+        <li>
+          <img src="./images/pintalabios-logona-45-g.jpeg" class="beauty-img">
+          <h6 class="product ml-3">Lip stick: </h6>
+          <h6 class="price mr-3">260$</h6>
+          <button type="button" onclick="addToCart(4)" class="btn">Add to cart</button>
+        </li>
+        <li>
+            <img src="./images/1616669821-base-maquillaje-sephora-1616669812.jpeg" class="beauty-img">
+            <h6 class="product ml-3">Makeup: </h6>
+            <h6 class="price mr-3">20.5$</h6>
+            <button type="button" onclick="addToCart(5)" class="btn">Add to cart</button>
+        </li>
+        <li>
+            <img src="./images/d8af9c0020873d1981638ffa33afefcd1a6d9e456f6251718a01f55101dbf5a307bab8070459fd9e56034e81f94b5a04d8545dcd21569c123f02d48da32809fc_1.jpeg" class="beauty-img">
+            <h6 class="product ml-3">Eyeliner: </h6>
+            <h6 class="price mr-3">12.75$</h6>
+            <button type="button" onclick="addToCart(6)" class="btn">Add to cart</button>
+        </li>
 
-      <div class="card col-sm-3 m-1 ml-5 p-4" style="width: 18rem;">
-        <img src="./images/product.svg" class="grocery-img">
-        <div class="card-body text-center">
-          <h5 class="card-title">All-in-1</h5>
-          <h1 class="card-text">$260</h1>
-          <button type="button" onclick="addToCart(4)" class="btn btn-primary">Add to cart</button>
-        </div>
-      </div>
-
-      <div class="card col-sm-3 m-1 ml-5 p-4" style="width: 18rem;">
-        <img src="./images/product.svg" class="grocery-img">
-        <div class="card-body text-center">
-          <h5 class="card-title">Zero makeup kit</h5>
-          <h1 class="card-text">$20.5</h1>
-          <button type="button" onclick="addToCart(5)" class="btn btn-primary">Add to cart</button>
-        </div>
-      </div>
-
-      <div class="card col-sm-3 m-1 ml-5 p-4" style="width: 18rem;">
-        <img src="./images/product.svg" class="grocery-img">
-        <div class="card-body text-center">
-          <h5 class="card-title">Lip tints</h5>
-          <h1 class="card-text">$12.75</h1>
-          <button type="button" onclick="addToCart(6)" class="btn btn-primary">Add to cart</button>
-        </div>
-      </div>
+      </ul>
     </div>
   </section>
 
   <!-- clothes part -->
   <section>
-    <h2 class="text-center"><i class="fas fa-tshirt mr-2"></i>Clothes</h2>
+    <div class="clothesImg">
+        <h2 class="text-center bannerTitle pt-5">Clothes</h2>
+    </div>
     <div id="clothes" class="row ml-3 m-5">
-
-      <div class="card col-sm-3 m-1 ml-5 p-4" style="width: 18rem;">
-        <img src="./images/product.svg" class="grocery-img">
-        <div class="card-body text-center">
-          <h5 class="card-title">Lawn dress</h5>
-          <h1 class="card-text">$15</h1>
-          <button type="button" onclick="addToCart(7)" class="btn btn-primary">Add to cart</button>
-        </div>
-      </div>
-
-      <div class="card col-sm-3 m-1 ml-5 p-4" style="width: 18rem;">
-        <img src="./images/product.svg" class="grocery-img">
-        <div class="card-body text-center">
-          <h5 class="card-title">Lawn-chiffon combo</h5>
-          <h1 class="card-text">$19.99</h1>
-          <button type="button" onclick="addToCart(8)" class="btn btn-primary">Add to cart</button>
-        </div>
-      </div>
-
-      <div class="card col-sm-3 m-1 ml-5 p-4" style="width: 18rem;">
-        <img src="./images/product.svg" class="grocery-img">
-        <div class="card-body text-center">
-          <h5 class="card-title">Toddler Frock</h5>
-          <h1 class="card-text">$9.99</h1>
+      <ul>
+        <li>
+            <img src="./images/71vJ6Jj-IqL._AC_UL1500_.jpg" class="clothes-img">
+            <h6 class="product ml-3">Dress: </h6>
+            <h6 class="price mr-3">15$</h6>
+            <button type="button" onclick="addToCart(7)" class="btn">Add to cart</button>
+        </li>
+        <li>
+            <img src="./images/da8bb419e9a7dc5a2b27040990508a9d.jpeg" class="clothes-img">
+            <h6 class="product ml-3">Shorts: </h6>
+            <h6 class="price mr-3">19.99$</h6>
+            <button type="button" onclick="addToCart(8)" class="btn">Add to cart</button>
+        </li>
+        <li>
+          <img src="./images/614tCTX0LeL._AC_UX385_.jpg" class="clothes-img">
+          <h6 class="product ml-3">Skirt: </h6>
+          <h6 class="price mr-3">9.99$</h6>
           <button type="button" onclick="addToCart(9)" class="btn btn-primary">Add to cart</button>
-        </div>
-      </div>
-      
+        </li>
+      </ul>      
     </div>
   </section>
 

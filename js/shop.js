@@ -2,55 +2,55 @@
 var products = [
     {
         id: 1,
-        name: 'cooking oil',
+        name: 'Avocado',
         price: 10.5,
         type: 'grocery'
     },
     {
         id: 2,
-        name: 'Pasta',
+        name: 'Tomato',
         price: 6.25,
         type: 'grocery'
     },
     {
         id: 3,
-        name: 'Instant cupcake mixture',
+        name: 'Banana',
         price: 5,
         type: 'grocery'
     },
     {
         id: 4,
-        name: 'All-in-one',
+        name: 'Lip stick',
         price: 260,
         type: 'beauty'
     },
     {
         id: 5,
-        name: 'Zero Make-up Kit',
+        name: 'Makeup',
         price: 20.5,
         type: 'beauty'
     },
     {
         id: 6,
-        name: 'Lip Tints',
+        name: 'Eyeliner',
         price: 12.75,
         type: 'beauty'
     },
     {
         id: 7,
-        name: 'Lawn Dress',
+        name: 'Dress',
         price: 15,
         type: 'clothes'
     },
     {
         id: 8,
-        name: 'Lawn-Chiffon Combo',
+        name: 'Shorts',
         price: 19.99,
         type: 'clothes'
     },
     {
         id: 9,
-        name: 'Toddler Frock',
+        name: 'Skirt',
         price: 9.99,
         type: 'clothes'
     }

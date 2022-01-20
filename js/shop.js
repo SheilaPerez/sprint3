@@ -65,29 +65,50 @@ var total = 0;
 
 // Exercise 1
 function buy(id) {
-    // 1. Loop for to the array products to get the item to add to cart
-    // 2. Add found product to the cartList array
+    for (var i = 0; i < products.length; i++) {
+        if (products[i].id == id) {
+            cartList.push(products[i]);
+        }     
+    }
 }
 
 // Exercise 2
 function cleanCart() {
-
+    cartList = [];
 }
 
 // Exercise 3
 function calculateTotal() {
-    // Calculate total price of the cart using the "cartList" array
+    var result = 0;
+    for (var i = 0; i < products.length; i++){
+        result = products[i].price + result;
+    }
+    return result;
 }
 
 // Exercise 4
 function generateCart() {
-    // Using the "cartlist" array that contains all the items in the shopping cart, 
-    // generate the "cart" array that does not contain repeated items, instead each item of this array "cart" shows the quantity of product.
+    for (var i = 0; i < cartList.length; i++){
+        var found = cart.findIndex(product => product.id == cartList[i].id);
+        if (found == -1) {
+            cartList[i].quantity = 1;
+            cart.push(cartList[i]);
+        } else {
+            cart[found].quantity++;
+        }
+    }
 }
 
 // Exercise 5
 function applyPromotionsCart() {
-    // Apply promotions to each item in the array "cart"
+    for (var i = 0; i < cart.length; i++) {
+        if (cart[i].id == 1 && cart[i].quantity >= 3) {
+            cart[i].price = 10;
+        }
+        if (cart[i].id == 3 && cart[i].quantity >= 10) {
+            cart[i].price = cart[i].price / 3;
+        }
+    }
 }
 
 

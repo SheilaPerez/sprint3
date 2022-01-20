@@ -1,16 +1,59 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-body {
-    font-family: Poppins;
-}
 #errorPassword, #errorName, #errorPhone, #errorEmail, #errorAddress, #errorLastName {
     display: none;
+    color: rgb(245, 151, 151);
+    font-size: 10px;
 }
 
 .errorColorRed {
-    border-color: red;
+    border-color: rgb(245, 151, 151);
 }
 
 .validGreen {
-    border-color: green;
+    border-color: rgb(199, 233, 174);
+}
+
+.quicksand {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.title {
+    font-family: 'The Nautigal', cursive;
+    color: #F4DFBA;
+    font-size: 110px;
+    display:flex;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+}
+
+.subtitle {
+    font-size: 15px;
+    margin-left: 110px;
+    z-index: 2;
+    margin-top: -30px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.bord {
+    background-color: #F4DFBA;
+}
+
+.btn {
+    background-color: #F2FFE9;
+    color: #FFAB76;
+    font-size: 15px;
+    border: none;
+}
+
+.btn:hover {
+    color: #F4DFBA;
+}
+
+@media (min-width: 992px) {
+    #errorPassword, #errorName, #errorPhone, #errorEmail, #errorAddress, #errorLastName {
+        margin: 0px 10px;
+
+    }
 }

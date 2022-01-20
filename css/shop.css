@@ -85,9 +85,69 @@ ul{list-style:none;}
 }
 
 .clothesImg {
-    background-image: url(../images/istockphoto-1257563298-170667a.jpeg);
+    background-image: url(../images/istockphoto-1321255356-170667a.jpeg);
     width: 100%;
     height: 400px;
     background-size: cover;
     background-position: center;
 }
+
+.modal-header {
+    background-color: #F2FFE9;
+}
+
+.modal-title {
+    color: #FFAB76;
+}
+
+.productCart {
+    font-weight: bold;
+    display: inline-block;
+}
+
+.quantityCart {
+    margin-left: 30px;
+    display: inline-block;
+}
+
+.priceCart {
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+
+.buttonCart {
+    display: inline-block;
+    background-color: #FFAB76;
+}
+
+.productImgCart {
+    width: 10%;
+    margin: 0px 10px 10px 0px;
+}
+
+.totalPriceCart {
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) { 
+    .healthyImg {
+        background-position: center;
+    }
+
+    .navbar-expand-md .navbar-nav .nav-link {
+        font-size: 20px;
+        color: #F4DFBA;
+    }
+
+    .navbar-expand-md .navbar-nav .nav-link:hover {
+        color: #FFAB76;
+    }
+ }
+
+@media (min-width: 992px) { 
+    .healthyImg {
+        background-position: center;
+    }
+ }
